@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+
+
+    <header class="container-intro">
+        <h1>Lista De Tarefas</h1>
+    </header>
+    
+    <div class="container">
+        <form action=".">
+            <label for="tarefas">Informe sua tarefa</label>
+            <input type="text" id="tarefas" name="tarefas" placeholder="Ex: Ler um livro" autocomplete="off">
+            <button id="cadastrar">Cadastrar Tarefa</button>
+        </form>
+    </div>
+
+    <main class="output">
+        <ul></ul>
+        <div class="info">
+            <p><span id="tarefasLista">0</span> tarefas na lista</p>
+            <a href="#" onclick="ModalTarefas.openClose()" title="Ver lista de tarefas concluídas"><span id="tarefasConcluidas">0</span> tarefas concluídas</a>
+        </div>
+    </main>
+
+    <footer>
+        <a href="#" onclick="ModalInfo.toggleMenu()">Como funciona?</a>
+    </footer>
+
+    <div class="modal-lista">
+        <div class="modal">
+            <div class="content-modal">
+                <div class="close" onclick="ModalTarefas.openClose()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h2>Lista de tarefas concluídas</h2>
+                <ul id="outputListaConcluida"></ul>
+                <a href="#" onclick="limparLista()">Limpar lista</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal" onclick="ModalInfo.toggleMenu()">
+        <div class="content-modal">
+            <h2>Como funciona a "Lista de Tarefas?"</h2>
+            <p>A aplicação <strong> "lista de tarefas" </strong>, o ajudará a organizar suas tarefas diárias, tornando-o mais produtivo em seu dia a dia.</p>
+            <p>Para utilizá-la de forma correta, é importante ter compreendido os passos abaixo:</p>
+            <ol>
+                <li>Digite a sua tarefa no campo de texto</li>
+                <li>Clique no botão cadastrar, para inserir sua tarefa na lista.</li>
+                <li>Caso tenha completada a tarefa, basta clica-la sobre a mesma e irá retirar.</li>
+            </ol>
+            <p>Pronto, em apenas 3 passos você poderá ser produtivo. Depende de você!</p>
+            <a href="#">Vamos lá!</a>
+        </div>
+    </div>
+
+    <script src="./public/js/script.js"></script>
+</body>
+</html>

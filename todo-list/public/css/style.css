@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+p, label, button, input, li, a, ::placeholder {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
+strong {
+    color: rgb(73, 135, 221);
+}
+
+h1,h2 {
+    font: normal 700 2em 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f1f2f5;
+}
+
+/* CONTAINER INTRO ======================= */
+.container-intro {
+    background: 
+    linear-gradient(to right, rgb(93, 163, 255),
+     rgb(98, 255, 255));
+    padding: 4em 0 ;
+    text-align: center;
+    height: 28vh;
+}
+
+.container-intro h1 {
+    font-size: 3.5em;
+    color: #fff;
+}
+
+/* CONTAINER ======================= */
+.container {
+    position: relative;
+    bottom: 50px;
+
+    max-width: min(90vw, 380px);
+    margin: 0 auto;
+    padding: 1.75em;
+
+    background: #fff;
+    border-radius: .25em;
+    
+    box-shadow: 0px 10px 5px rgb(218, 218, 218);
+}
+
+.container form label {
+    display: block;
+    font-size: 1.25em;
+    margin-bottom: .5em;
+}
+
+.container form input {
+    width: 100%;
+    padding: .875em .625em;
+    border-radius: .25em;
+
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.container form input:focus {
+    border: 1px solid rgb(93, 163, 255);
+}
+
+.container button {
+    display: block;
+    width: 100%;
+    padding: .625em .875em;
+    margin-top: .625em;
+  
+    border-radius: .25em;
+    cursor: pointer;
+
+    color: #fff;
+    font-size: 1.5em;
+    background: linear-gradient(to right, rgb(93, 163, 255), rgb(98, 255, 255));
+}
+
+/* OUTPUT ======================= */
+.output {
+    max-width: min(90vw, 380px);
+    margin: -2em auto 0;
+    padding: 1.75em;
+
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 7px 5px #e7e7e7;
+    border-radius: .25em;
+}
+
+.output ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em .5em;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    margin-bottom: .625em;
+    border-radius: .25em;
+
+    font-size: 1.125em;
+    color: #3f3f3f;
+
+    transition: background .2s;
+    user-select: none;
+}
+
+.output ul li:hover {
+    background: #f9f9f9;
+}
+
+.output ul li .icone {
+    visibility: hidden;
+    color: rgb(252, 117, 117);
+    padding: .25em;
+}
+
+.output ul li.ativo {
+    text-decoration: line-through;
+}
+
+.output .info {
+    margin-top: 3em;
+    color: #b4b4b4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output .info a {
+    color: rgb(119, 176, 255);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.output .info a:hover {
+    color: rgb(73, 135, 221);
+}
+
+/* FOOTER ======================= */
+footer {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.125em;
+}
+
+footer a {
+    color: rgb(126, 170, 233);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+footer a:hover {
+    color: rgb(73, 135, 221);
+}
+
+/* MODAL ======================= */
+.modal {
+    visibility: hidden;
+}
+
+.modal.ativo {    
+    visibility: visible;
+
+    position: absolute;
+    inset: 0;
+
+    padding-top: 4em;
+    background: rgba(0, 0, 0, 0.349);
+    box-shadow: 0px 7px 5px #e7e7e7;
+
+    transition: all .3s;
+}
+
+.modal.ativo .content-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 2em 3.5em;
+    
+    border-radius: .25em;
+}
+
+.modal.ativo .content-modal h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #4b4b4b;
+
+    margin-bottom: 1em;
+}
+
+.modal.ativo .content-modal p {
+    color: #7e7e7e;
+
+    margin-bottom: 1em;
+}
+
+.modal.ativo .content-modal ol {
+    max-width: 80%;
+    margin-bottom: 1em;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    padding: 1em 0;
+}
+
+.modal.ativo .content-modal ol li {
+    margin-bottom: .625em;
+    color: rgb(49, 49, 49);
+}
+
+.modal.ativo .content-modal a {
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+    background: linear-gradient(to right, rgb(93, 163, 255), rgb(98, 255, 255));
+    font-size: 1.5em;    
+    padding: .625em 0;
+
+    border-radius: .25em;
+}
+
+/* LISTA MODAL ======================= */
+.modal-lista .modal {
+    display: none;
+}
+.modal-lista .modal.ativo {
+    display: block
+}
+
+.modal-lista .modal.ativo .content-modal .close  {
+    align-self: flex-end;
+    font-size: 1.75em;
+    cursor: pointer;
+    color: #4b4b4b;
+    margin-bottom: .5em;
+}
+
+.modal-lista .modal.ativo .content-modal h2 {
+    margin: 0;
+    font-size: 1.75em;
+}
+.modal-lista .content-modal ul {
+    margin: 1.75em 0;
+    text-align: center;
+
+    width: 50%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.modal-lista .content-modal ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-lista .content-modal ul::-webkit-scrollbar-thumb {
+    background: rgb(154, 196, 255);
+    border-left: 2px solid rgb(154, 196, 255);
+    border-right: 2px solid rgb(154, 196, 255);
+}
+
+
+.modal-lista .content-modal ul li {
+    font-size: 1.125em;
+    color: #7e7e7e;
+    line-height: 1.8;
+
+    padding: .625em 0;
+    
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.modal-lista .content-modal ul li:last-child {
+    border-bottom: none;
+}
+
+.modal-lista .content-modal a {
+     background: linear-gradient(to right, rgb(93, 163, 255), rgb(98, 255, 255));
+    font-size: 1.25em;    
+    padding: .625em 0;
+
+    border-radius: .25em;
+}
+
+/* MEDIA QUERIES ======================= */
+@media (max-width: 900px) {
+    .modal.ativo .content-modal {
+        max-width: 70%;
+        padding: 1.75em 2em;
+
+    }
+}
+
+@media (max-width: 420px) {
+    .container-intro {
+        padding: 2em 0 ;
+        height: 20vh;
+    }
+
+    .container-intro h1 {
+        font-size: 2.5em;
+    }
+
+    .container {
+        bottom: 45px;
+        padding: 1.25em;
+    }
+    
+    .container form label {
+        font-size: 1.125em;
+    }
+    
+    .container form input {
+        padding: .625em .625em;
+    }
+    
+    .container button {
+        padding: .625em .875em;
+        font-size: 1.125em;
+    }
+
+    /* OUTPUT ======================= */
+    .output {
+        margin: -2em auto 0;
+        padding: 1.5em;
+    }
+
+    .output ul li {
+        padding: .5em;
+        margin-bottom: .5em;
+        font-size: 1em;
+    }
+    .output .info{
+        font-size: .875em;
+    }
+
+    .modal.ativo {    
+        padding-top: 1em;
+    } 
+    
+    .modal.ativo .content-modal {
+        max-width: 90%;
+        padding: 1.5em;
+    }
+
+    .modal.ativo .content-modal h2 {
+        font-size: 1.75em;
+    
+        margin-bottom: 1em;
+    }
+
+    .modal.ativo .content-modal a {
+        font-size: 1em;    
+        padding: .625em 0;
+    }
+
+    .modal.ativo .content-modal p {
+        margin-bottom: .625em;
+    }
+
+    .modal.ativo .content-modal ol {
+        max-width: 90%;
+        margin-bottom: .625em;
+    
+        padding: .875em 0;
+    }
+    
+}
