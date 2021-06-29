@@ -1,13 +1,9 @@
 // Variáveis necessárias
 const inputTarefa = document.querySelector("#tarefas")
 const output = document.querySelector(".output ul")
-
 const tarefas = JSON.parse(localStorage.getItem('Tarefas')) || []
-const listaConcluida = JSON.parse(localStorage.getItem('Tarefas Concluídas')) || []
-
 const tarefasLista = document.querySelector('#tarefasLista')
 const tarefasConcluidas = document.querySelector('#tarefasConcluidas')
-const outputListaConcluida = document.querySelector('.modal-lista #outputListaConcluida')
 
 // Atualiza a tela com os dados dos arrays
 function atualizaTela() {
@@ -80,21 +76,6 @@ function execute(event) {
 
 }
 
-// Adiciona itens a minha lista de tarefas concluídas
-function atualizaListaConcluida() {
-    outputListaConcluida.innerHTML = ""
-    listaConcluida.forEach((item)=> {
-        const newLi = document.createElement('li')
-        const text = document.createTextNode(item)
-        newLi.appendChild(text)
-        outputListaConcluida.appendChild(newLi)
-    })
-    // Informando quantos itens tem no array
-    tarefasConcluidas.innerHTML = listaConcluida.length
-    saveDateStorageTarefasConcluidas()
-}
-atualizaListaConcluida()
-
 // Função resposável por remover itens de uma array
 function removendoTarefas(valor) {
     // Remover o item do array
@@ -111,18 +92,6 @@ function saveDateStorageTarefas() {
     localStorage.setItem('Tarefas', JSON.stringify(tarefas))
 }
 
-function limparLista() {
-    listaConcluida.forEach((item)=> {
-        item.shift()
-    })
-    atualizaListaConcluida()
-}
-
-// Salvando o array LISTA CONLUIDA no localStorage
-function saveDateStorageTarefasConcluidas() {
-    // Todo navegador web possui um bancos de dados
-    localStorage.setItem('Tarefas Concluídas', JSON.stringify(listaConcluida))
-}
 
 const button = document.querySelector("#cadastrar")
 button.addEventListener("click", execute)
@@ -132,12 +101,5 @@ const ModalInfo = {
     locationDOM: document.querySelector("#modal"),
     toggleMenu() {
         this.locationDOM.classList.toggle('ativo')
-    }
-}
-
-const ModalTarefas = {
-    location: document.querySelector(".modal-lista .modal"),
-    openClose() { 
-        this.location.classList.toggle('ativo')
     }
 }

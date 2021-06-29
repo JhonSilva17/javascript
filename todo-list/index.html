@@ -30,26 +30,9 @@
         <ul></ul>
         <div class="info">
             <p><span id="tarefasLista">0</span> tarefas na lista</p>
-            <a href="#" onclick="ModalTarefas.openClose()" title="Ver lista de tarefas concluídas"><span id="tarefasConcluidas">0</span> tarefas concluídas</a>
+            <a href="#" onclick="ModalInfo.toggleMenu()">Como funciona?</a>
         </div>
     </main>
-
-    <footer>
-        <a href="#" onclick="ModalInfo.toggleMenu()">Como funciona?</a>
-    </footer>
-
-    <div class="modal-lista">
-        <div class="modal">
-            <div class="content-modal">
-                <div class="close" onclick="ModalTarefas.openClose()">
-                    <i class="fas fa-times"></i>
-                </div>
-                <h2>Lista de tarefas concluídas</h2>
-                <ul id="outputListaConcluida"></ul>
-                <a href="#" onclick="limparLista()">Limpar lista</a>
-            </div>
-        </div>
-    </div>
 
     <div class="modal" id="modal" onclick="ModalInfo.toggleMenu()">
         <div class="content-modal">
