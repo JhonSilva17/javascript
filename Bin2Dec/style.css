@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: .25em;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    background-image:
+    linear-gradient(to right top, 
+    rgb(219, 90, 170), 
+    rgb(0, 127, 211));
+}
+
+.container {
+    width: 35%;
+    margin: 0 auto;
+    padding: 3em;
+    
+    border: 2px solid #fff;
+    border-radius: .5em;
+}
+
+@media (max-width: 670px) {
+    .container {
+        width: 60%;
+        padding: 2em;
+    }
+       
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.container .items h1 {
+    font: normal 800 3em 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.container .items p {
+    margin: .625em 0 2em;
+}
+
+.container .items p::after {
+    content: '';
+    display: block;
+    background: rgb(230, 141, 222);
+    width: 40%;
+    height: 3px;
+    margin: .625em auto;
+    border-radius: .25em;
+}
+
+.container .items p, .items label, .items button{
+    font: normal 400 1.25em/1.5 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+.container .items form label {
+    display: block;
+    text-align: left;
+    margin: .25em 0;
+    font-weight: 600;
+}
+
+.container .items form input {
+    padding: .625em .5em;
+    width: 100%;
+    font: normal 400 1.125em/1.5 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 1em;
+}
+
+.container .items form button {
+    margin-top: 1em;
+
+    display: block;
+    width: 100%;
+    padding: .875em;
+
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+    background-image:
+    linear-gradient(to right top, 
+    rgb(219, 90, 170), 
+    rgb(0, 127, 211));
+}
+
+@media (max-width: 420px) {
+    .container .items h1 {
+        font: normal 800 2.5em 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+}
