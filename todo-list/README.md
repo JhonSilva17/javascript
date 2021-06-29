@@ -11,4 +11,5 @@ O Todo-List, ou gerenciador de tarefas, serve para ajudar pessoas à se organiza
 ***
 
 Este projeto foi desenvolvido a fim de treinar minhas habilidades com Javascript.
+
 Ver o projeto on-line: [clique aqui](https://todo-list-jhon.netlify.app)
