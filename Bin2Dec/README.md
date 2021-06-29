@@ -1,4 +1,4 @@
-<h2 align="center">Bin2Dev</h2>
+<h1 align="center">Bin2Dev</h1>
 
 ## :information_source: Sobre
 
