@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background: #222;
+        }
+        
+        .container {
+            max-width: 400px;
+            position: relative;
+
+            margin: 0rem auto;
+        }
+
+        .item.active {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .item {
+            position: absolute;
+            inset: 0;
+
+            visibility: hidden;
+            opacity: 0;
+            
+            transform: translateX(8px);
+            transition: .3s;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            margin-top: 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            font-size: 3rem;
+
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 2rem;
+                margin-top: 6rem;
+            }
+            .container {
+                max-width: 240px;
+                position: relative;
+
+                margin: 0rem auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Slider de Imagens</h1>
+    </header>
+    <div class="container">
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=541&q=80" alt="Imagem 1">
+        </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1569586098165-3edd7212e4f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Imagem 2">
+        </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1599005799645-246e7d538e29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=511&q=80" alt="Imagem 3">
+        </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1605525859280-e4216d92afc3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="">
+        </div>
+    </div>
+
+    
+    <script src="./script.js"></script>
+
+</body>
+</html>
