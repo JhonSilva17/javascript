@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Link</title>
+</head>
+<body>
+    
+    <h1>Gerador de link de mensagem para o Whatsapp</h1>
+    <p>O funcionamento é bastante simples: informe seu número de telefone e a mensagem que quer enviar, e pronto! Só basta apertar o botão e seu link estará pronto.</p>
+
+    <form>
+        <div class="tel">
+            <label for="num">Informe o número: </label>
+            <input type="text" name="num" id="num" placeholder="(DDD) 9999-9999">
+        </div> <!--TEL-->
+        <div class="mensagem">
+            <label for="msg">Sua mensagem: </label>
+            <textarea name="msg" id="msg"></textarea>
+        </div>
+
+        <div class="button">
+            <button type="button" id="gerar">Gerar link</button>
+        </div>
+    </form> <!--FORM-->
+
+    <div class="output">
+        Seu link sairá aqui
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
