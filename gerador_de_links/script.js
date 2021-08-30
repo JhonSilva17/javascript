@@ -37,10 +37,3 @@ function gerarLink() {
 
 const btn = document.querySelector('#gerar');
 btn.addEventListener('click', gerarLink)
-
-
-/* const htmlText = `<div>O melhor item</div> <div>A melhor lista</div>`
-const htmlArray = htmlText.split('div') 
-const novoHtml = htmlArray.join('section')
-
-console.log(htmlArray, novoHtml) */

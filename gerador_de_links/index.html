@@ -5,30 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Link</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    <h1>Gerador de link de mensagem para o Whatsapp</h1>
-    <p>O funcionamento é bastante simples: informe seu número de telefone e a mensagem que quer enviar, e pronto! Só basta apertar o botão e seu link estará pronto.</p>
 
-    <form>
-        <div class="tel">
-            <label for="num">Informe o número: </label>
-            <input type="text" name="num" id="num" placeholder="(DDD) 9999-9999">
-        </div> <!--TEL-->
-        <div class="mensagem">
-            <label for="msg">Sua mensagem: </label>
-            <textarea name="msg" id="msg"></textarea>
-        </div>
+    <div id="container">  
+        <div class="container-content">
+            <header>
+                <h1>Gerador de link de mensagem para o <strong>Whatsapp</strong></h1>
+                <p>O funcionamento é bastante simples: informe seu número de telefone e a mensagem que quer enviar, e pronto! Só basta apertar o botão e seu link estará pronto.</p>
+            </header>  <!--HEADER-->
 
-        <div class="button">
-            <button type="button" id="gerar">Gerar link</button>
-        </div>
-    </form> <!--FORM-->
+            <main>
+                <form>
+                    <div class="tel">
+                        <label for="num">Informe o número: </label>
+                        <input type="text" name="num" id="num" placeholder="(DDD) 9999-9999">
+                    </div> <!--TEL-->
+                    <div class="mensagem">
+                        <label for="msg">Sua mensagem: </label>
+                        <textarea name="msg" id="msg"></textarea>
+                    </div> <!--MSG-->
+        
+                    <div class="button">
+                        <button type="button" id="gerar">Gerar link</button>
+                    </div> <!--BUTTON-->
+                </form> <!--FORM-->
+        
+                <div class="output">
+                    Seu link sairá aqui
+                </div> <!--OUTPUT-->
+            </main> <!--MAIN-->
+        </div> <!--CONTAINER-CONTENT-->
 
-    <div class="output">
-        Seu link sairá aqui
-    </div>
+        <div class="container-image"></div> <!--CONTAINER-IMAGE-->
+    </div> <!--CONTAINER-->
 
 
     <script src="./script.js"></script>
